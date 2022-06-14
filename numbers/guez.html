@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="game-intro">
+            <h1>Hádání čísel</h1>
+            <p>Na začátku každé hry je vygenerováno náhodné číslo v rozsahu 0...100. Hráč má toto číslo uhodnout, po každém pokusu se dozví, zda je skutečná hodnota vyšší nebo nižší než jeho odhad.</p>
+            <p>Cílem je uhodnout toto číslo na co nejmenší počet pokusů.</p>
+        </header>
+        <section class="last-guess-panel">
+            <h2>Výsledek</h2>
+            <p id="last-result" class="last-result up">Číslo je menší.</p>
+        </section>
+        <section class="player-panel">
+            <h2>Hráčův odhad</h2>
+            <div class="player-control">
+                <div class="player-navigation">
+                    <button id="dec5" data-size="-5" class="btn down btn-ico">--</button>
+                    <button id="dec1" data-size="-1" class="btn down btn-ico">-</button>
+                    <span id="guess-value" class="show-value btn-ico">14</span>
+                    <button id="inc1" data-size="1" class="btn up btn-ico">+</button>
+                    <button id="inc5" data-size="5" class="btn up btn-ico">++</button>
+                </div>
+                <div class="player-start">
+                    <button id="do-guess" class="btn btn-go btn-ico">Hádej</button>
+                    <button id="do-restart" class="btn btn-go btn-ico">Restart</button>
+                </div>
+                <div class="player-statistics">
+                    <dl>
+                        <dt>Počet pokusů</dt>
+                        <dd id="round">0</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        <section class="history">
+            <h2>Historie</h2>
+            <ol id="history" class="history-list">
+                <li class="up">53</li>
+                <li class="down">12</li>
+                <li class="up">42</li>
+            </ol>
+        </section>
+    </div>
+</body>
+</html>
